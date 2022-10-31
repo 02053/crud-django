@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="post" class="card card-body text-center">
+                <h1>Sign Up</h1>
+
+                {{ error }}
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <input type="text"  name="username" class="form-control" placeholder="Write your username" id="username">
+                </div>
+                <button>Sign up</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
