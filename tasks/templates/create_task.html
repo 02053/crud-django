@@ -2,14 +2,20 @@
 
 {% block content %}
 
-<h1>Create Task</h1>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
 
-<form method="post">
+            <form method="post" class="card-body card">
 
-    {% csrf_token %}
-    {{ form }}
-    <button>Save task</button>
+                <h1>Create Task</h1>
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn btn-primary">Save task</button>
 
-</form>
+            </form>
+        </div>
+    </div>
+</main>
 
 {% endblock %}
